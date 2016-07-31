@@ -50,7 +50,7 @@ $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';
-$db['default']['password'] = '';
+$db['default']['password'] = 'Cpdnf@2016';
 $db['default']['database'] = 'nairaforex';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';

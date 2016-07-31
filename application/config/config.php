@@ -16,7 +16,7 @@
 | environments.
 |
 */
-$config['base_url'] = 'http://www.valecooper.com.br/backoffice/';
+$config['base_url'] = 'http://localhost/nairaforex';
 
 /*
 |--------------------------------------------------------------------------
