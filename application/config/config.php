@@ -16,7 +16,7 @@
 | environments.
 |
 */
-$config['base_url'] = 'http://www.nairaforex/backoffice';
+$config['base_url'] = '';
 
 /*
 |--------------------------------------------------------------------------
