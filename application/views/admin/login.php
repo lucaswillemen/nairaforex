@@ -42,7 +42,7 @@
 <!-- BEGIN LOGO -->
 <div class="logo">
     <a href="<?php echo site_url('ctadmin/login');?>">
-    <img src="<?php echo base_url('uploads/'.config_site('imagem_logo'));?>" style="height: 17px;" alt=""/>
+    <img src="<?php echo base_url('uploads/'.config_site('imagem_logo'));?>" style="height: 170px;" alt=""/>
     </a>
 </div>
 <!-- END LOGO -->
