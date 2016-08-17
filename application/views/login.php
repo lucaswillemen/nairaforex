@@ -43,7 +43,7 @@
 <!-- BEGIN LOGO -->
 <div class="logo">
 	<a href="<?php echo site_url();?>">
-	<img src="http://www.nairaforex.com/backoffice/nairaforex_files/logo_n.png" alt=""/>
+	<img src="http://www.nairaforex.com/backoffice/nairaforex_files/logo_n.png" alt="" style="width:240px" />
 	</a>
 </div>
 <!-- END LOGO -->
