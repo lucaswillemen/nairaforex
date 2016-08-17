@@ -35,7 +35,7 @@
 </head>
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
-<body class="login" style="background: url(http://www.valecooper.com.br/img/bg.jpg); no-repeat center center scrol">
+<body class="login" style="background: url(http://www.nairaforex.com.br/nairaforex_files/logo_n.png); no-repeat center center scrol">
 <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
 <div class="menu-toggler sidebar-toggler">
 </div>
