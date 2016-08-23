@@ -77,7 +77,7 @@ check_session();
                 <!-- BEGIN LOGO -->
                 <div class="page-logo">
                     <a href="<?php echo base_url('conta'); ?>">
-                        <img src="<?php echo base_url('uploads/' . config_site('imagem_logo_admin')); ?>" alt="<?php echo config_site('nome_site'); ?>" class="logo-default"/>
+                        <img src="<?php echo base_url('uploads/' . config_site('imagem_logo_admin')); ?>" alt="<?php echo config_site('nome_site'); ?>" class="logo-default" style="width: 31%;"/>
                     </a>
                     <div class="menu-toggler sidebar-toggler">
                         <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
