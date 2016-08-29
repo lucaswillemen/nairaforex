@@ -44,7 +44,7 @@
                             <?php
                             if(config_site('valor_minimo_transferencia') > 0){
 
-                                echo '<p class="text-center">O valor mínimo para cada transferência é de <b>R$ '.config_site('valor_minimo_transferencia').' Reais</b>.</p>';
+                                echo '<p class="text-center">O valor mínimo para cada transferência é de <b>$ '.config_site('valor_minimo_transferencia').' USD</b>.</p>';
                             }
                             ?>
                                 <form action="" method="post" class="form-horizontal">

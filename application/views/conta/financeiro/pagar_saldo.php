@@ -71,13 +71,13 @@
                                 ?>
                                     <p>
                                         <b>ID da Fatura:</b> #<?php echo $informacao->id;?><br />
-                                        <b>Valor da Fatura:</b> R$ <?php echo number_format($informacao->quantidade_cotas * (config_site('valor_cota')),2);?> Reais<br />
+                                        <b>Valor da Fatura:</b> $ <?php echo number_format($informacao->quantidade_cotas * (config_site('valor_cota')),2);?> USD<br />
                                         <?php
                                         if(config_site('taxa_pagamento_saldo') > 0){
-                                            echo '<b>Taxa: </b>R$ '.config_site('taxa_pagamento_saldo').' Reais <br />';
+                                            echo '<b>Taxa: </b>$ '.config_site('taxa_pagamento_saldo').' USD <br />';
                                         }
                                         ?>
-                                        <b>Total a pagar: </b> R$ <?php echo number_format(($informacao->quantidade_cotas * (config_site('valor_cota'))) + config_site('taxa_pagamento_saldo'), 2);?> Reais
+                                        <b>Total a pagar: </b> $ <?php echo number_format(($informacao->quantidade_cotas * (config_site('valor_cota'))) + config_site('taxa_pagamento_saldo'), 2);?> USD
                                     </p>
 
                                     <input type="hidden" name="id" value="<?php echo $informacao->id;?>">

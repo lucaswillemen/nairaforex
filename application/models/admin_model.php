@@ -718,6 +718,7 @@ class Admin_model extends CI_Model {
         $permitir_renovacao_automatica = $this->input->post('permitir_renovacao_automatica');
         $ativa_gerencianet = $this->input->post('ativa_gerencianet');
         $token_gerencianet = $this->input->post('token_gerencianet');
+        $xpub = $this->input->post('xpub');
         $permitir_cadastro_anuncio = $this->input->post('permitir_cadastro_anuncio');
         $valor_reserva = $this->input->post('valor_reserva');
         $array_config = array(
@@ -744,6 +745,7 @@ class Admin_model extends CI_Model {
             'permitir_renovacao_automatica' => $permitir_renovacao_automatica,
             'ativa_gerencianet' => $ativa_gerencianet,
             'token_gerencianet' => $token_gerencianet,
+            'xpub' => $xpub,
             'permitir_cadastro_anuncio' => $permitir_cadastro_anuncio
         );
 
@@ -879,10 +881,10 @@ class Admin_model extends CI_Model {
 
         if ($insert) {
 
-            return '<div class="alert alert-success text-center">Conta bancária adicionada com sucesso!</div>';
+            return '<div class="alert alert-success text-center">Carteira adicionada com sucesso!</div>';
         }
 
-        return '<div class="alert alert-danger text-center">Erro ao adicionar conta bancária.</div>';
+        return '<div class="alert alert-danger text-center">Erro ao adicionar carteira.</div>';
     }
 
     public function InformacaoContaBancaria($id) {
@@ -914,10 +916,10 @@ class Admin_model extends CI_Model {
 
         if ($update) {
 
-            return '<div class="alert alert-success text-center">Conta bancária atualizada com sucesso!</div>';
+            return '<div class="alert alert-success text-center">Carteira atualizada com sucesso!</div>';
         }
 
-        return '<div class="alert alert-danger text-center">Erro ao atualizar conta bancária.</div>';
+        return '<div class="alert alert-danger text-center">Erro ao atualizar carteira.</div>';
     }
 
     public function ExcluirContaBancaria($id) {

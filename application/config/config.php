@@ -16,7 +16,7 @@
 | environments.
 |
 */
-$config['base_url'] = 'http://www.nairaforex.com/backoffice/';
+$config['base_url'] = 'http://backoffice.niftycapital.com/';
 
 /*
 |--------------------------------------------------------------------------

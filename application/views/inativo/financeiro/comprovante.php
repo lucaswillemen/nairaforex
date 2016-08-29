@@ -53,7 +53,7 @@
                                                     <?php
                                                     foreach($faturas as $fatura){
                                                     ?>
-                                                    <option value="<?php echo $fatura->id;?>">Fatura #<?php echo $fatura->id;?> - Compra de <?php echo $fatura->quantidade_cotas;?> cotas por R$ <?php echo number_format($fatura->quantidade_cotas * config_site('valor_cota'), 2);?> Reais</option>
+                                                    <option value="<?php echo $fatura->id;?>">Fatura #<?php echo $fatura->id;?> - Compra de <?php echo $fatura->quantidade_cotas;?> cotas por $ <?php echo number_format($fatura->quantidade_cotas * config_site('valor_cota'), 2);?> Dollars</option>
                                                     <?php
                                                     }
                                                     ?>

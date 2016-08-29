@@ -158,7 +158,7 @@
                                                                  Valor
                                                             </div>
                                                             <div class="col-md-7 value">
-                                                                R$ <?php echo number_format($saque->valor, 2, ",", ".");?>
+                                                                $ <?php echo number_format($saque->valor, 2, ",", ".");?>
                                                             </div>
                                                         </div>
                                                         <?php

@@ -80,7 +80,7 @@
                                                 <?php echo $usuario->email; ?>
                                             </td>
                                             <td>
-                                                R$ <?php echo number_format($usuario->saldo_disponivel, 2, ",", "."); ?>
+                                                $ <?php echo number_format($usuario->saldo_disponivel, 2, ",", "."); ?>
                                             </td>
                                             <td>
                                                 <?php echo ($usuario->block == 1) ? 'Sim' : 'Não'; ?>

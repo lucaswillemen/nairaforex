@@ -59,7 +59,7 @@
                                          Recebimentos
                                     </div>
                                     <div class="uppercase font-hg font-purple">
-                                         R$ <?php echo $this->admin->Recebimentos();?>
+                                         $ <?php echo $this->admin->Recebimentos();?>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-3 col-xs-6">
@@ -158,7 +158,7 @@
                                         <a href="javascript:;" class="primary-link"><?php echo $atividade->nome;?></a>
                                     </td>
                                     <td>
-                                         R$ <?php echo number_format($atividade->saldo_disponivel, 2, ",", ".");?>
+                                         $ <?php echo number_format($atividade->saldo_disponivel, 2, ",", ".");?>
                                     </td>
                                     <td>
                                          <?php echo $atividade->quantidade_cotas;?>

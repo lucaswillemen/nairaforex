@@ -47,7 +47,7 @@
 
                                 <p>
                                     <b>Quantidade:</b> <?php echo $quantidade;?> cota(s) <br />
-                                    <b>Valor a pagar: </b> R$ <?php echo number_format($quantidade * (config_site('valor_cota')), 2);?> Reais
+                                    <b>Valor a pagar: </b> $ <?php echo number_format($quantidade * (config_site('valor_cota')), 2);?> USD
                                 </p>
 
                                 <?php
@@ -85,16 +85,14 @@
                                         <div class="panel-heading">
                                             <h4 class="panel-title">
                                             <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapse_<?php echo $conta->id;?>">
-                                            <?php echo $conta->banco;?></a>
+                                            <?php echo $conta->tipo_conta;?></a>
                                             </h4>
                                         </div>
                                         <div id="collapse_<?php echo $conta->id;?>" class="panel-collapse collapse">
                                             <div class="panel-body">
                                                 <p>
-                                                     <b>Agência: </b><?php echo $conta->agencia;?><br />
-                                                     <b>Conta: </b> <?php echo $conta->conta;?><br />
-                                                     <b>Tipo de conta: </b> <?php echo $conta->tipo_conta;?><br />
-                                                     <b>Titular: </b> <?php echo $conta->titular;?>
+                                                     <b>Endereço da carteira: </b> <?php echo $conta->tipo_conta;?><br />
+                                                     <b>Nome do endereço: </b> <?php echo $conta->titular;?>
                                                 </p>
                                             </div>
                                         </div>

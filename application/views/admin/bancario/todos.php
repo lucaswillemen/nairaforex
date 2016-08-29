@@ -7,11 +7,11 @@
                     <a href="#">Home</a><i class="fa fa-circle"></i>
                 </li>
                 <li>
-                    <a href="<?php echo base_url('ctadmin/bancario');?>">Contas Bancárias</a>
+                    <a href="<?php echo base_url('ctadmin/bancario');?>">Carteiras</a>
                     <i class="fa fa-circle"></i>
                 </li>
                 <li class="active">
-                     Todoas contas bancárias
+                     Todas carteiras
                 </li>
             </ul>
             <!-- END PAGE BREADCRUMB -->
@@ -23,11 +23,11 @@
                         <div class="portlet-title">
                             <div class="caption">
                                 <i class="fa fa-cogs font-green-sharp"></i>
-                                <span class="caption-subject font-green-sharp bold uppercase">Gerenciar contas bancárias para depósito</span>
+                                <span class="caption-subject font-green-sharp bold uppercase">Gerenciar carteiras para depósito</span>
                             </div>
                             <div class="tools">
                             <div class="form-actions">
-                                    <a href="<?php echo base_url('ctadmin/bancario/nova');?>" class="btn blue">Adicionar nova conta</a>
+                                    <a href="<?php echo base_url('ctadmin/bancario/nova');?>" class="btn blue">Adicionar nova carteira</a>
                                 </div>
                                 <br />
                             </div>
@@ -37,19 +37,10 @@
                             <thead>
                             <tr>
                                 <th>
-                                    Banco
+                                     Endereço da carteira
                                 </th>
                                 <th>
-                                    Agência
-                                </th>
-                                <th>
-                                     Conta
-                                </th>
-                                <th>
-                                     Tipo de conta
-                                </th>
-                                <th>
-                                    Titular
+                                    Nome do endereço
                                 </th>
                                 <th>
                                      Ação
@@ -62,15 +53,6 @@
                                 foreach($contas as $conta){
                             ?>
                             <tr>
-                                <td>
-                                    <?php echo $conta->banco;?>
-                                </td>
-                                <td>
-                                    <?php echo $conta->agencia;?>
-                                </td>
-                                <td>
-                                     <?php echo $conta->conta;?>
-                                </td>
 
                                 <td>
                                      <?php echo $conta->tipo_conta;?>

@@ -199,7 +199,7 @@
                                                                  Saldo disponível
                                                             </div>
                                                             <div class="col-md-7 value">
-                                                                R$ <?php echo number_format($usuario->saldo_disponivel, 2, ",", ".");?>
+                                                                $ <?php echo number_format($usuario->saldo_disponivel, 2, ",", ".");?>
                                                             </div>
                                                         </div>
                                                         <div class="row static-info">
@@ -207,7 +207,7 @@
                                                                  Saldo bloqueado
                                                             </div>
                                                             <div class="col-md-7 value">
-                                                                R$ <?php echo number_format($usuario->saldo_bloqueado, 2, ",", ".");?>
+                                                                $ <?php echo number_format($usuario->saldo_bloqueado, 2, ",", ".");?>
                                                             </div>
                                                         </div>
                                                     </div>

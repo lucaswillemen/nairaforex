@@ -26,7 +26,7 @@
                         </div>
                         <div class="details">
                             <div class="number">
-                                 R$ <?php echo $this->conta_model->user('saldo_disponivel');?>
+                                 $ <?php echo $this->conta_model->user('saldo_disponivel');?>
                             </div>
                             <div class="desc">
                                  Disponível para saque
@@ -41,7 +41,7 @@
                         </div>
                         <div class="details">
                             <div class="number">
-                                 R$ <?php echo $this->conta_model->ValoresPagos();?>
+                                 $ <?php echo $this->conta_model->ValoresPagos();?>
                             </div>
                             <div class="desc">
                                  Enviados para sua conta bancária
@@ -69,7 +69,7 @@
                                 <?php
                                 if(config_site('saque_disponivel') == 1){
                                 ?>
-                                <p class="text-center">Lembrando que o valor mínimo permitido para saque é de <b>R$ <?php echo config_site('valor_minimo_saque');?> Reais</b></p>
+                                <p class="text-center">Lembrando que o valor mínimo permitido para saque é de <b>$ <?php echo config_site('valor_minimo_saque');?> USD</b></p>
                                 <p class="text-center">Após ser solicitado o saque, o valor informado será retirado do seu <b>Saldo Disponível</b> e será colocado no <b>Saldo Bloqueado</b> até que o sistema faça o pagamento do seu pedido. Para que possamos fazer seu saque com maior agilidade e rapidez, sempre deixe os dados bancários atualizados.</p>
 
                                 <div class="alert alert-info text-center">Para efetuar um saque você pagará uma taxa de <b><?php echo config_site('taxa_saque');?>%</b> que será acrescentado no valor do saque.</div>
@@ -114,7 +114,7 @@
                                          <div class="form-group">
                                             <label class="control-label col-md-3">Valor Pedido</label>
                                             <div class="col-md-6">
-                                               <strong> R$ <?php echo number_format($this->input->post('valor'), 2, ",", ".");?> Reais</strong>
+                                               <strong> $ <?php echo number_format($this->input->post('valor'), 2, ",", ".");?> USD</strong>
                                             </div>
                                         </div>
 
@@ -134,7 +134,7 @@
                                                 $percentual = config_site('taxa_saque') / 100;
                                                 $valor_total = $this->input->post('valor') + ($this->input->post('valor') * $percentual);
 
-                                                echo '<strong>R$ '.number_format($valor_total, 2, ",", ".").' Reais</strong>';
+                                                echo '<strong>$ '.number_format($valor_total, 2, ",", ".").' USD</strong>';
                                                 ?>
                                             </div>
                                         </div>

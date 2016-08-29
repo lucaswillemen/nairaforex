@@ -17,7 +17,7 @@
                         <div class="portlet box yellow">
                             <div class="portlet-title">
                                 <div class="caption">
-                                    <i class="fa fa-money"></i>Informações da Fatura
+                                    <i class="fa fa-money"></i>Informações da Fatura teste
                                 </div>
                             </div>
                             <div class="portlet-body form">
@@ -33,7 +33,7 @@
 
                                 <p>
                                     <b>Quantidade:</b> <?php echo $quantidade;?> cota(s) <br />
-                                    <b>Valor a pagar: </b> R$ <?php echo number_format($quantidade * (config_site('valor_cota')), 2);?> Reais
+                                    <b>Valor a pagar: </b> $ <?php echo number_format($quantidade * (config_site('valor_cota')), 2);?> USD
                                 </p>
 
                                 <?php

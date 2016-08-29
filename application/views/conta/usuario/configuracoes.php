@@ -33,7 +33,7 @@
                                                     <a href="#tab_1_3" data-toggle="tab">Mudar Senha</a>
                                                 </li>
                                                 <li class="<?php echo (isset($message3)) ? 'active' : '';?>">
-                                                    <a href="#tab_1_4" data-toggle="tab">Conta Bancária</a>
+                                                    <a href="#tab_1_4" data-toggle="tab">Carteira (Wallet)</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -103,7 +103,7 @@
                                                 <?php if(isset($message3)) echo $message3; ?>
 
                                                     <form role="form" action="" method="post">
-                                                        <div class="form-group">
+                                                        <!--<div class="form-group">
                                                             <label class="control-label">Banco</label>
                                                             <select name="banco" autocomplete="off" class="form-control" required>
                                                                 <?php
@@ -122,18 +122,18 @@
                                                         <div class="form-group">
                                                             <label class="control-label">Conta <small>com dígito</small></label>
                                                             <input type="text" name="conta" value="<?php echo $this->conta_model->user('conta');?>" required   class="form-control"/>
-                                                        </div>
+                                                        </div>-->
                                                         <div class="form-group">
-                                                            <label class="control-label">Tipo de conta</label>
+                                                            <label class="control-label">Endereço da carteira</label>
                                                             <input type="text" name="tipo_conta" value="<?php echo $this->conta_model->user('tipo_conta');?>" required class="form-control"/>
                                                         </div>
                                                         <div class="form-group">
-                                                            <label class="control-label">Titular da conta</label>
+                                                            <label class="control-label">Nome do endereço</label>
                                                             <input type="text" name="titular" value="<?php echo $this->conta_model->user('titular');?>" required class="form-control"/>
                                                         </div>
 
                                                         <div class="margiv-top-10">
-                                                            <input type="submit" name="submit3" class="btn green-haze" value="Atualizar conta bancária">
+                                                            <input type="submit" name="submit3" class="btn green-haze" value="Atualizar carteira">
                                                         </div>
                                                     </form>
                                                 </div>

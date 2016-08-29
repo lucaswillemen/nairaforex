@@ -7,11 +7,11 @@
                     <a href="<?php echo base_url('ctadmin');?>">Home</a><i class="fa fa-circle"></i>
                 </li>
                 <li>
-                    <a href="<?php echo base_url('ctadmin/bancario');?>">Contas Bancárias</a>
+                    <a href="<?php echo base_url('ctadmin/bancario');?>">Carteiras</a>
                     <i class="fa fa-circle"></i>
                 </li>
                 <li class="active">
-                     Adicionar nova conta
+                     Adicionar nova carteira
                 </li>
             </ul>
             <!-- END PAGE BREADCRUMB -->
@@ -24,7 +24,7 @@
                             <div class="caption">
                                 <i class="fa fa-bank font-green-sharp"></i>
                                 <span class="caption-subject font-green-sharp bold uppercase">
-                                Adicionar nova conta para depósito </span>
+                                Adicionar nova carteira para depósito </span>
                             </div>
                         </div>
                         <div class="portlet-body">
@@ -44,7 +44,7 @@
                                                     <?php if(isset($message)) echo $message; ?>
 
 
-                                                        <div class="form-group">
+                                                        <!--<div class="form-group">
                                                             <label>Banco</label>
                                                             <input type="text" name="banco" class="form-control" value="">
                                                         </div>
@@ -57,15 +57,15 @@
                                                         <div class="form-group">
                                                             <label>Conta</label>
                                                             <input type="text" name="conta" class="form-control">
-                                                        </div
+                                                        </div>-->
 
                                                         <div class="form-group">
-                                                            <label>Tipo de conta</label>
+                                                            <label>Endereço da carteira</label>
                                                             <input type="text" name="tipo_conta" class="form-control">
                                                         </div>
 
                                                         <div class="form-group">
-                                                            <label>Titular</label>
+                                                            <label>Nome do endereço</label>
                                                             <input type="text" name="titular" class="form-control">
                                                         </div
 

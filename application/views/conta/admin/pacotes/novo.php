@@ -66,7 +66,7 @@
                                                                     <?php
                                                                     for ($i = 1; $i <= 300; $i++) {
                                                                         $valor = number_format(config_site('valor_cota') * $i, 2);
-                                                                        echo "<option value = '{$i}'>$i cota(s) -R$ {$valor}</option>";
+                                                                        echo "<option value = '{$i}'>$i cota(s) -$ {$valor}</option>";
                                                                     }
                                                                     ?>
 

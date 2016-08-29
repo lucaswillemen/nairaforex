@@ -7,11 +7,11 @@
                     <a href="<?php echo base_url('ctadmin');?>">Home</a><i class="fa fa-circle"></i>
                 </li>
                 <li>
-                    <a href="<?php echo base_url('ctadmin/bancario');?>">Contas Bancárias</a>
+                    <a href="<?php echo base_url('ctadmin/bancario');?>">Carteiras</a>
                     <i class="fa fa-circle"></i>
                 </li>
                 <li class="active">
-                     Editar conta bancária
+                     Editar carteira
                 </li>
             </ul>
             <!-- END PAGE BREADCRUMB -->
@@ -24,7 +24,7 @@
                             <div class="caption">
                                 <i class="fa fa-bank font-green-sharp"></i>
                                 <span class="caption-subject font-green-sharp bold uppercase">
-                                Editar uma conta bancária </span>
+                                Editar uma carteira </span>
                             </div>
                         </div>
                         <div class="portlet-body">
@@ -44,28 +44,15 @@
                                                     <?php if(isset($message)) echo $message; ?>
 
 
-                                                        <div class="form-group">
-                                                            <label>Banco</label>
-                                                            <input type="text" name="banco" class="form-control" value="<?php echo $conta->banco;?>">
-                                                        </div>
+                                                        
 
                                                         <div class="form-group">
-                                                            <label>Agência</label>
-                                                            <input type="text" name="agencia" class="form-control" value="<?php echo $conta->agencia?>">
-                                                        </div>
-
-                                                        <div class="form-group">
-                                                            <label>Conta</label>
-                                                            <input type="text" name="conta" class="form-control" value="<?php echo $conta->conta;?>">
-                                                        </div
-
-                                                        <div class="form-group">
-                                                            <label>Tipo de conta</label>
+                                                            <label>Endereço da carteira</label>
                                                             <input type="text" name="tipo_conta" class="form-control" value="<?php echo $conta->tipo_conta;?>">
                                                         </div>
 
                                                         <div class="form-group">
-                                                            <label>Titular</label>
+                                                            <label>Nome do endereço</label>
                                                             <input type="text" name="titular" class="form-control" value="<?php echo $conta->titular;?>">
                                                         </div
 

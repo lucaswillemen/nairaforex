@@ -12,7 +12,7 @@
         <div class="dashboard-stat2">
             <div class="display">
                 <div class="number">
-                    <h3 class="font-green-sharp"><small class="font-green-sharp">R$ </small><?php echo $this->conta_model->user('saldo_disponivel'); ?></h3>
+                    <h3 class="font-green-sharp"><small class="font-green-sharp">$ </small><?php echo $this->conta_model->user('saldo_disponivel'); ?></h3>
                     <small>SALDO DISPONÍVEL</small>
                 </div>
                 <div class="icon">
@@ -31,7 +31,7 @@
         <div class="dashboard-stat2">
             <div class="display">
                 <div class="number">
-                    <h3 class="font-red-haze"><small class="font-red-haze">R$ </small><?php echo $this->conta_model->user('saldo_bloqueado'); ?></h3>
+                    <h3 class="font-red-haze"><small class="font-red-haze">$ </small><?php echo $this->conta_model->user('saldo_bloqueado'); ?></h3>
                     <small>SALDO BLOQUEADO</small>
                 </div>
                 <div class="icon">

@@ -459,7 +459,7 @@ class Conta_model extends CI_Model {
                         return '<div class="alert alert-danger text-center">Erro ao transferir saldo.</div>';
                     }
 
-                    return '<div class="alert alert-danger text-center">O valor mínimo para transferência é de <b>R$ ' . config_site('valor_minimo_transferencia') . ' Reais</b>.</div>';
+                    return '<div class="alert alert-danger text-center">O valor mínimo para transferência é de <b>$ ' . config_site('valor_minimo_transferencia') . ' USD</b>.</div>';
                 }
 
                 return '<div class="alert alert-danger text-center">Saldo insuficiente para transferência.</div>';
@@ -648,7 +648,7 @@ class Conta_model extends CI_Model {
             if ($valorMin <= 0) {
                 $valorMin = 0;
             }
-            return '<div class="alert alert-danger text-center">O valor solicitado é maior do que o permitido. O valor máximo permitido é de <b>R$ ' . $valorMin . ' Reais</b></div>';
+            return '<div class="alert alert-danger text-center">O valor solicitado é maior do que o permitido. O valor máximo permitido é de <b>$ ' . $valorMin . ' USD</b></div>';
         } else if ($valor >= config_site('valor_minimo_saque')) {
 
             if ($row->saldo_disponivel >= ($valor + config_site('valor_reserva'))) {
@@ -684,10 +684,10 @@ class Conta_model extends CI_Model {
                 return '<div class="alert alert-danger text-center">Erro ao solicitar seu saque. Tente novamente mais tarde.</div>';
             }
 
-            return '<div class="alert alert-danger text-center">O valor solicitado é maior do que você tem em conta. Você tem que ter ao menos R$ ' . $valor . ' Reais.</div>';
+            return '<div class="alert alert-danger text-center">O valor solicitado é maior do que você tem em conta. Você tem que ter ao menos $ ' . $valor . ' USD.</div>';
         }
 
-        return '<div class="alert alert-danger text-center">O valor solicitado é menor do que o permitido. O valor mínimo permitido é de <b>R$ ' . config_site('valor_minimo_saque') . ' Reais</b></div>';
+        return '<div class="alert alert-danger text-center">O valor solicitado é menor do que o permitido. O valor mínimo permitido é de <b>$ ' . config_site('valor_minimo_saque') . ' USD</b></div>';
     }
 
     public function ValoresPagos() {
@@ -795,10 +795,10 @@ class Conta_model extends CI_Model {
 
         if ($atualiza) {
 
-            return '<div class="alert alert-success text-center">Conta bancária atualizada com sucesso!</div>';
+            return '<div class="alert alert-success text-center">Carteira atualizada com sucesso!</div>';
         }
 
-        return '<div class="alert alert-danger text-center">Erro ao atualizar conta bancária.</div>';
+        return '<div class="alert alert-danger text-center">Erro ao atualizar carteira.</div>';
     }
 
     public function Indicados($id = '') {

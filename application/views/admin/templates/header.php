@@ -120,7 +120,7 @@ check_session_admin();
                                         <a href="<?php echo base_url('ctadmin/saques'); ?>">Saques</a>
                                     </li>
                                     <li>
-                                        <a href="<?php echo base_url('ctadmin/bancario'); ?>">Contas Bancárias</a>
+                                        <a href="<?php echo base_url('ctadmin/bancario'); ?>">Carteiras</a>
                                     </li>
                                 </ul>
                             </li>

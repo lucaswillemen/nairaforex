@@ -273,7 +273,8 @@ $s_n = array(0 => 'Não', 1 => 'Sim');
                                                 <label class="col-md-2 control-label">Próxima execução do CRON <a href="javascript:void(0);" class="label label-danger img-rounded tooltips" data-container="body" data-placement="bottom" data-html="true" data-original-title="Configure aqui a próxima execução do CRON. Ele é responsável por executar a função de pagamento das cotas. Nessa data será o próximo pagamento de cotas. Essa data também é alterado automáticamente pelo sistema após pagar a cota nessa data."><i class="fa fa-question"></i></a>
                                                 </label>
                                                 <div class="col-md-10">
-                                                    <input type="text" id="datacron" name="proxima_execucao" class="form-control" value="<?php echo date('d/m/Y', $cron->proxima_execucao); ?>">                                                    </div>
+                                                    <input type="text" id="datacron" name="proxima_execucao" class="form-control" value="<?php echo date('d/m/Y', $cron->proxima_execucao); ?>">
+                                                </div>
                                             </div>
 
                                             <div class="form-group">
@@ -335,7 +336,7 @@ $s_n = array(0 => 'Não', 1 => 'Sim');
                                             </div>
 
                                             <div class="form-group">
-                                                <label class="col-md-2 control-label">Ativar Gerencia Net ?
+                                                <label class="col-md-2 control-label">Ativar BlockChain ?
                                                 </label>
                                                 <div class="col-md-10">
                                                     <select name="ativa_gerencianet" class="form-control" autocomplete="off">
@@ -352,12 +353,21 @@ $s_n = array(0 => 'Não', 1 => 'Sim');
                                             </div>
 
                                             <div class="form-group">
-                                                <label class="col-md-2 control-label">Token Gerencia Net
+                                                <label class="col-md-2 control-label">Token BlockChain
                                                 </label>
                                                 <div class="col-md-10">
                                                     <input type="text" class="form-control" name="token_gerencianet" value="<?php echo $config->token_gerencianet; ?>">
                                                 </div>
                                             </div>
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">xPub BlockChain
+                                                </label>
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control" name="xpub" value="<?php echo $config->xpub; ?>">
+                                                </div>
+                                            </div>
+                                            <p>Para gerar uma Key V2 da BlockChain, clique no link <a target="_blank" href="https://api.blockchain.info/v2/apikey/request/">Gerar API V2 Key</a> </p>
+                                            <p>Para encontrar o seu xPub Key acesse sua conta e vá em <b>Settings -> Accounts & Addresses -> Show xPub</b> </p>
 
                                         </div>
                                     </div>

@@ -144,10 +144,6 @@
                         <input class="form-control placeholder-no-fix" type="email" placeholder="Email" name="email" required/>
                     </div>
                     <div class="form-group">
-                        <label class="control-label visible-ie8 visible-ie9">CPF</label>
-                        <input class="form-control placeholder-no-fix" type="text" placeholder="CPF" id="cpf" name="cpf" required/>
-                    </div>
-                    <div class="form-group">
                         <label class="control-label visible-ie8 visible-ie9">Nascimento</label>
                         <input class="form-control placeholder-no-fix" type="text" placeholder="Data de nascimento" name="nascimento" id="data" required/>
                     </div>
