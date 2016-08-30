@@ -60,7 +60,7 @@
                                         $ <?php echo number_format(config_site('valor_cota') * $fatura->quantidade_cotas, 2);?> USD
                                     </td>
                                     <td>
-                                         <a href="<?php echo base_url('inativo/faturas/pagar/'.$fatura->id);?>" class="btn green">Pagar</a> <a href="<?php echo base_url('faturas/cancelar/'.$fatura->id);?>" class="btn red">Cancelar</a>
+                                         <a href="<?php echo base_url('inativo/faturas/pagar/'.$fatura->id);?>" class="btn green">Pagar</a> 
                                     </td>
                                 </tr>
 
