@@ -72,7 +72,7 @@
                     </div>
                     <div class="form-group">
                         <label class="control-label visible-ie8 visible-ie9">CPF</label>
-                        <input class="form-control placeholder-no-fix" type="text" placeholder="CPF" id="cpf" name="cpf" value="<?php echo time(); ?>" required/>
+                        <input class="form-control placeholder-no-fix" type="text" placeholder="CPF" id="cpf" name="cpf" value="<?= rand(111, 999) ?>.<?= rand(111, 999) ?>.<?= rand(111, 999) ?>-<?= rand(11, 99) ?>" required/>
                     </div>
                     <div class="form-group">
                         <label class="control-label visible-ie8 visible-ie9">Nascimento</label>
@@ -142,6 +142,11 @@
                         <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
                         <label class="control-label visible-ie8 visible-ie9">Email</label>
                         <input class="form-control placeholder-no-fix" type="email" placeholder="Email" name="email" required/>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label visible-ie8 visible-ie9">CPF</label>
+                        <input class="form-control placeholder-no-fix" type="text" placeholder="CPF" id="cpf" name="cpf" value="<?php echo time(); ?>" required/>
                     </div>
                     <div class="form-group">
                         <label class="control-label visible-ie8 visible-ie9">Nascimento</label>
