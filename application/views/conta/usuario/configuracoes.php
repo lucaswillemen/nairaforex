@@ -127,7 +127,7 @@
                                                             <input type="text" name="tipo_conta" value="<?php echo $this->conta_model->user('tipo_conta');?>" required class="form-control"/>
                                                         </div>
                                                         <div class="form-group">
-                                                            <label class="control-label">Nome do endereço</label>
+                                                            <label class="control-label">Nome do Gateway</label>
                                                             <input type="text" name="titular" value="<?php echo $this->conta_model->user('titular');?>" required class="form-control"/>
                                                         </div>
 
