@@ -43,7 +43,7 @@
         <!-- BEGIN LOGO -->
         <div class="logo">
             <a href="<?php echo site_url(); ?>">
-                <img src="<?php echo base_url('uploads/' . config_site('imagem_logo')); ?>" alt=""/>
+                <img src="<?php echo base_url('uploads/' . config_site('imagem_logo')); ?>" alt="" style="    margin: -140px"/>
             </a>
         </div>
         <!-- END LOGO -->
