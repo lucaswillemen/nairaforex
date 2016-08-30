@@ -92,7 +92,7 @@
                             if ($query->num_rows > 0) {
                                 foreach ($query->result() as $row) {
                                     $valor = number_format(config_site('valor_cota') * $row->cotas_qnt, 2);
-                                    echo "<option value='{$row->id}'>{$row->cotas_qnt} banca(s) - {$valor}</option>";
+                                    echo "<option value='{$row->id}'>{$row->cotas_qnt} cota(a) - {$valor}</option>";
                                 }
                             }
                             ?>  
@@ -161,7 +161,7 @@
                             if ($query->num_rows > 0) {
                                 foreach ($query->result() as $row) {
                                     $valor = number_format(config_site('valor_cota') * $row->cotas_qnt, 2);
-                                    echo "<option value='{$row->id}'>{$row->nome} - {$row->cotas_qnt} cota(a) - {$valor}</option>";
+                                    echo "<option value='{$row->id}'>{$row->nome} - {$row->cotas_qnt} banca(s) - {$valor}</option>";
                                 }
                             }
                             ?>  
