@@ -55,7 +55,6 @@
                                                             <input type="email" name="email" value="<?php echo $this->conta_model->user('email');?>" class="form-control" required/>
                                                         </div>
                                                         <div class="form-group">
-                                                            <label class="control-label">CPF</label>
                                                             <input type="hidden" name="cpf" value="<?php echo $this->conta_model->user('cpf');?>" id="cpf" class="form-control" required/>
                                                         </div>
                                                         <div class="form-group">
