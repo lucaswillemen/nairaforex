@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tempo de Geração: 30/07/2016 às 22:57
--- Versão do servidor: 5.6.28-0ubuntu0.14.04.1
--- Versão do PHP: 5.5.9-1ubuntu4.14
+-- Tempo de Geração: 30/08/2016 às 04:23
+-- Versão do servidor: 5.5.50-0ubuntu0.14.04.1
+-- Versão do PHP: 5.5.9-1ubuntu4.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Banco de dados: `mypubliccard`
+-- Banco de dados: `db`
 --
 
 DELIMITER $$
@@ -1243,7 +1243,14 @@ CREATE TABLE IF NOT EXISTS `admin_login` (
   `senha` varchar(50) NOT NULL,
   `permissao` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Fazendo dump de dados para tabela `admin_login`
+--
+
+INSERT INTO `admin_login` (`id`, `nome`, `login`, `senha`, `permissao`) VALUES
+(1, 'Admin', 'adm', '202cb962ac59075b964b07152d234b70', 2);
 
 -- --------------------------------------------------------
 
@@ -1299,10 +1306,17 @@ CREATE TABLE IF NOT EXISTS `contas_bancarias` (
   `banco` varchar(150) NOT NULL,
   `agencia` varchar(15) NOT NULL,
   `conta` varchar(30) NOT NULL,
-  `tipo_conta` varchar(20) NOT NULL,
+  `tipo_conta` varchar(200) NOT NULL,
   `titular` varchar(60) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Fazendo dump de dados para tabela `contas_bancarias`
+--
+
+INSERT INTO `contas_bancarias` (`id`, `banco`, `agencia`, `conta`, `tipo_conta`, `titular`) VALUES
+(1, '0', '0', '0', '155vXUwh2qwJ64oXi1JM7hpDNUvvg2bGxL', 'Nifty Capital - BlockChain.info');
 
 -- --------------------------------------------------------
 
@@ -1318,7 +1332,7 @@ CREATE TABLE IF NOT EXISTS `cotas` (
   `ultimo_recebimento` int(20) NOT NULL,
   `status` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 -- --------------------------------------------------------
 
@@ -1330,7 +1344,14 @@ CREATE TABLE IF NOT EXISTS `cron` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `proxima_execucao` int(15) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Fazendo dump de dados para tabela `cron`
+--
+
+INSERT INTO `cron` (`id`, `proxima_execucao`) VALUES
+(1, 1472428800);
 
 -- --------------------------------------------------------
 
@@ -1346,7 +1367,16 @@ CREATE TABLE IF NOT EXISTS `extrato` (
   `cor` varchar(10) NOT NULL,
   `data` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+--
+-- Fazendo dump de dados para tabela `extrato`
+--
+
+INSERT INTO `extrato` (`id`, `id_user`, `valor`, `descricao`, `cor`, `data`) VALUES
+(1, 8, 180.00, 'indicação direta() ', '#FF0000', '2016-08-30'),
+(2, 8, 150.00, 'indicação (-1º Nível)', '#FF0000', '2016-08-30'),
+(3, 8, 150.00, 'indicação (-2º Nível)', '#FF0000', '2016-08-30');
 
 -- --------------------------------------------------------
 
@@ -1363,7 +1393,14 @@ CREATE TABLE IF NOT EXISTS `faturas` (
   PRIMARY KEY (`id`),
   KEY `idx_id_user` (`id_user`),
   KEY `idx_status` (`status`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=101 ;
+
+--
+-- Fazendo dump de dados para tabela `faturas`
+--
+
+INSERT INTO `faturas` (`id`, `id_user`, `quantidade_cotas`, `renovacao`, `status`) VALUES
+(100, 101, 300, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1397,7 +1434,14 @@ CREATE TABLE IF NOT EXISTS `notificacoes` (
   `visto` int(11) NOT NULL,
   `data` int(15) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Fazendo dump de dados para tabela `notificacoes`
+--
+
+INSERT INTO `notificacoes` (`id`, `id_user`, `mensagem`, `visto`, `data`) VALUES
+(1, 8, 'Fatura #106 liberada! 300 cota(s) ativada(s) !', 1, 1472530195);
 
 -- --------------------------------------------------------
 
@@ -1430,7 +1474,25 @@ CREATE TABLE IF NOT EXISTS `pacotes` (
   `reserva` double(10,2) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `cotas_qnt` (`cotas_qnt`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
+
+--
+-- Fazendo dump de dados para tabela `pacotes`
+--
+
+INSERT INTO `pacotes` (`id`, `nome`, `valor`, `status`, `nivel`, `nivel1`, `nivel2`, `nivel3`, `nivel4`, `nivel5`, `nivel6`, `nivel7`, `nivel8`, `nivel9`, `nivel10`, `nivel11`, `nivel12`, `nivel13`, `nivel14`, `cotas_qnt`, `saque_max`, `reserva`) VALUES
+(1, '[HB] BASIC', 0.00, 'Ativo', 0.50, 0.30, 0.20, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 1, 0.00, 0.00),
+(2, '[HB] BASIC', 0.00, 'Ativo', 2.50, 1.50, 1.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 5, 0.00, 0.00),
+(3, '[HB] BASIC', 0.00, 'Ativo', 4.00, 2.40, 1.60, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 8, 0.00, 0.00),
+(4, '[HB] BASIC', 0.00, 'Ativo', 5.00, 3.00, 2.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 10, 0.00, 0.00),
+(5, '[HB] MASTER', 0.00, 'Ativo', 9.00, 7.50, 6.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 15, 0.00, 0.00),
+(6, '[HB] MASTER', 0.00, 'Ativo', 15.00, 12.50, 10.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 25, 0.00, 0.00),
+(7, '[HB] MASTER', 0.00, 'Ativo', 30.00, 25.00, 20.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 50, 0.00, 0.00),
+(8, '[HB] MASTER', 0.00, 'Ativo', 60.00, 50.00, 40.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 100, 0.00, 0.00),
+(9, '[HB] ADVANCED', 0.00, 'Ativo', 90.00, 75.00, 75.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 150, 0.00, 0.00),
+(10, '[HB] ADVANCED', 0.00, 'Ativo', 120.00, 100.00, 100.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 200, 0.00, 0.00),
+(11, '[HB] ADVANCED', 0.00, 'Ativo', 150.00, 125.00, 125.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 250, 0.00, 0.00),
+(12, '[HB] ADVANCED', 0.00, 'Ativo', 180.00, 150.00, 150.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 300, 0.00, 0.00);
 
 -- --------------------------------------------------------
 
@@ -1490,7 +1552,15 @@ CREATE TABLE IF NOT EXISTS `patrocinadores` (
   PRIMARY KEY (`id`),
   KEY `idx_id_patrocinador` (`id_patrocinador`),
   KEY `idx_id_usuario` (`id_usuario`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+
+--
+-- Fazendo dump de dados para tabela `patrocinadores`
+--
+
+INSERT INTO `patrocinadores` (`id`, `id_usuario`, `id_patrocinador`) VALUES
+(6, 8, 8),
+(7, 101, 100);
 
 -- --------------------------------------------------------
 
@@ -1759,9 +1829,16 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   PRIMARY KEY (`id`),
   KEY `idx_nome` (`nome`),
   KEY `idx_login` (`login`),
-  KEY `idx_cpf` (`cpf`),
   KEY `idx_data_cadastro` (`data_cadastro`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=102 ;
+
+--
+-- Fazendo dump de dados para tabela `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `nome`, `email`, `cpf`, `nascimento`, `celular`, `login`, `senha`, `banco`, `agencia`, `conta`, `tipo_conta`, `titular`, `block`, `saldo_disponivel`, `saldo_bloqueado`, `data_cadastro`, `pacote`, `pontos`, `graduacao`) VALUES
+(100, '', '', '', '0000-00-00', '', 'niftycapital', 'e79d400d4481dff1f2773e8fcd5f257a', NULL, NULL, NULL, NULL, NULL, 0, 0.00, 0.00, '0000-00-00', 0, 0, 0),
+(101, 'Ronaldo Ribeiro Bueno', 'buenobl13@gmail.com', '1472530869', '1984-10-01', '(62) 98185-9193', 'lideraguia', '41922224c52c3b1bd2f2421f04309aa3', NULL, NULL, NULL, NULL, NULL, 1, 0.00, 0.00, '2016-08-30', 12, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1802,16 +1879,24 @@ CREATE TABLE IF NOT EXISTS `website_config` (
   `taxa_saque` int(11) NOT NULL,
   `pagamento_automatico` int(11) NOT NULL,
   `hora_pagamento` varchar(5) NOT NULL,
-  `valor_minimo_pago` varchar(3) NOT NULL,
-  `valor_maximo_pago` varchar(3) NOT NULL,
+  `valor_minimo_pago` varchar(6) NOT NULL,
+  `valor_maximo_pago` varchar(6) NOT NULL,
   `permitir_renovacao_automatica` int(11) NOT NULL,
   `paga_fim_de_semana` int(11) NOT NULL,
   `ativa_gerencianet` int(11) NOT NULL,
   `token_gerencianet` varchar(200) NOT NULL,
+  `xpub` text NOT NULL,
   `permitir_cadastro_anuncio` int(11) NOT NULL DEFAULT '1',
   `valor_reserva` double(10,2) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Fazendo dump de dados para tabela `website_config`
+--
+
+INSERT INTO `website_config` (`id`, `nome_site`, `imagem_logo`, `imagem_logo_backoffice`, `imagem_logo_admin`, `favicon`, `valor_indicacao`, `email_remetente`, `valor_cota`, `maximo_cotas`, `validade_cotas`, `permitir_transferencia_membros`, `valor_minimo_transferencia`, `pagar_com_saldo`, `taxa_pagamento_saldo`, `saque_disponivel`, `valor_minimo_saque`, `dias_saque`, `taxa_saque`, `pagamento_automatico`, `hora_pagamento`, `valor_minimo_pago`, `valor_maximo_pago`, `permitir_renovacao_automatica`, `paga_fim_de_semana`, `ativa_gerencianet`, `token_gerencianet`, `xpub`, `permitir_cadastro_anuncio`, `valor_reserva`) VALUES
+(1, 'Nifty Capital', 'logo_login.png', 'logo_backoffice.png', 'logo_admin.png', 'favicon.png', 0.00, '', 10.00, 50000, 120, 0, 0.00, 0, 0.00, 1, 10.00, 0, 10, 1, '00:00', '020', '020', 1, 0, 1, '', '', 0, 0.00);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
