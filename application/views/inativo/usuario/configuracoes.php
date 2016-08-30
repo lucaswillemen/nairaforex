@@ -113,7 +113,7 @@
                                                         </div>
 
                                                         <div class="margiv-top-10">
-                                                            <input type="submit" name="submit3" class="btn green-haze" value="Atualizar conta bancária">
+                                                            <input type="submit" name="submit3" class="btn green-haze" value="Atualizar carteira">
                                                         </div>
                                                     </form>
                                                 </div>
