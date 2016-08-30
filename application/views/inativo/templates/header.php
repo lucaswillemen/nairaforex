@@ -67,7 +67,11 @@
     <!-- DOC: Apply "page-full-width" class to the body element to have full width page without the sidebar menu -->
     <!--<body class="page-header-fixed page-container-bg-solid page-sidebar-closed-hide-logo page-header-fixed-mobile page-footer-fixed1">-->
     <body class="page-header-fixed page-sidebar-closed-hide-logo page-sidebar-closed-hide-logo">
-
+<style type="text/css">
+    .page-header.navbar .page-logo .logo-default {
+    margin: -26px 10px 0 60px;
+}
+</style>
         <!-- BEGIN HEADER -->
         <div class="page-header navbar navbar-fixed-top">
             <!-- BEGIN HEADER INNER -->
