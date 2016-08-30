@@ -46,7 +46,7 @@
                                 ?>
 
                                 <p>
-                                    <b>Quantidade:</b> <?php echo $quantidade;?> cota(s) <br />
+                                    <b>Quantidade:</b> <?php echo $quantidade;?> banca(s) <br />
                                     <b>Valor a pagar: </b> $ <?php echo number_format($quantidade * (config_site('valor_cota')), 2);?> USD // 
                                     <?php 
 $val = number_format($quantidade * (config_site('valor_cota')), 2);

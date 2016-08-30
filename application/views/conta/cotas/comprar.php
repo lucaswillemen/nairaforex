@@ -102,7 +102,7 @@
                             <br />
 
                             <p>
-                                <b>Quantidade:</b> <?php echo $quantidade; ?> cota(s) <br />
+                                <b>Quantidade:</b> <?php echo $quantidade; ?> banca(s) <br />
                                 <b>Valor a pagar: </b> $ <?php echo number_format($quantidade * (config_site('valor_cota')), 2); ?> USD
                                 <?php 
 $val = number_format($quantidade * (config_site('valor_cota')), 2);
@@ -121,12 +121,13 @@ echo "$xml BTC"; ?>
                             }
                             ?>
 
-                            <h3>Pague via depósito bancário</h3>
+                            <h3>Pague usando BlockChain</h3>
 
-                            <p>
-                                Segue abaixo as contas disponíveis para depósito. Após o depósito, nos envie o comprovante com a data atual e o seu login. <br />
-                                <small>Caso já tenha feito o depósito, <a href="<?php echo base_url('comprovante'); ?>">clique aqui</a> para enviar o comprovante.</small>
-                            </p>
+                           
+                                <p>
+                                    Segue abaixo as carteiras disponíveis para depósito. Após o depósito, nos envie o comprovante com a data atual e o seu login. <br />
+                                    <small>Caso já tenha feito o depósito, <a href="<?php echo base_url('comprovante');?>">clique aqui</a> para enviar o comprovante.</small>
+                                </p>
 
                             <!-- BEGIN ACCORDION PORTLET-->
                             <div class="portlet-body">
