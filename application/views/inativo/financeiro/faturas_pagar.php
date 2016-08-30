@@ -34,6 +34,11 @@
                                 <p>
                                     <b>Quantidade:</b> <?php echo $quantidade;?> cota(s) <br />
                                     <b>Valor a pagar: </b> $ <?php echo number_format($quantidade * (config_site('valor_cota')), 2);?> USD
+                                                    <?php 
+$val = number_format($quantidade * (config_site('valor_cota')), 2);
+$request = "https://blockchain.info/tobtc?currency=USD&cors=true&value=".$val;
+$xml = file_get_contents($request);
+echo "$xml BTC"; ?>
                                 </p>
 
                                 <?php
@@ -44,16 +49,17 @@
 
                                 <h3>Pague usando Boleto Bancário</h3>
 
-                                <a href="<?php echo $link_boleto;?>" target="_blank"><img src="<?php echo base_url();?>assets/admin/layout/img/boleto.png" width="100" height="70" /></a>
+                                <a href="<?php echo $link_boleto;?>" target="_blank"><img src="<?php echo base_url();?>assets/admin/layout/img/boleto.png" height="70" /></a>
                                 <?php
                                 }
                                 ?>
 
-                                <h3>Pague via depósito bancário</h3>
+
+                                <h3>Pague por transferência online</h3>
 
                                 <p>
-                                    Segue abaixo as contas disponíveis para depósito. Após o depósito, nos envie o comprovante com a data atual e o seu login. <br />
-                                    <small>Caso já tenha feito o depósito, <a href="http://www.valecooper.com.br/backoffice/inativo/comprovante">clique aqui</a> para enviar o comprovante.</small>
+                                    Segue abaixo as carteiras disponíveis para depósito. Após o depósito, nos envie o comprovante com a data atual e o seu login. <br />
+                                    <small>Caso já tenha feito o depósito, <a href="<?php echo base_url('comprovante');?>">clique aqui</a> para enviar o comprovante.</small>
                                 </p>
 
                                 <!-- BEGIN ACCORDION PORTLET-->
@@ -71,16 +77,14 @@
                                         <div class="panel-heading">
                                             <h4 class="panel-title">
                                             <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapse_<?php echo $conta->id;?>">
-                                            <?php echo $conta->banco;?></a>
+                                            <?php echo $conta->titular;?></a>
                                             </h4>
                                         </div>
                                         <div id="collapse_<?php echo $conta->id;?>" class="panel-collapse collapse">
                                             <div class="panel-body">
                                                 <p>
-                                                     <b>Agência: </b><?php echo $conta->agencia;?><br />
-                                                     <b>Conta: </b> <?php echo $conta->conta;?><br />
-                                                     <b>Tipo de conta: </b> <?php echo $conta->tipo_conta;?><br />
-                                                     <b>Titular: </b> <?php echo $conta->titular;?>
+                                                     <b>Endereço da carteira: </b> <?php echo $conta->tipo_conta;?><br />
+                                                     <b>Nome do endereço: </b> <?php echo $conta->titular;?>
                                                 </p>
                                             </div>
                                         </div>
