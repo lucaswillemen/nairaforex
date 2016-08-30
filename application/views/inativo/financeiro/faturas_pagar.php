@@ -36,7 +36,7 @@
                                     <b>Valor a pagar: </b> $ <?php echo number_format($quantidade * (config_site('valor_cota')), 2);?> USD //
                                                     <?php 
 $val = number_format($quantidade * (config_site('valor_cota')), 2);
-$request = "https://blockchain.info/tobtc?currency=USD&cors=true&value=".$val;
+$request = "https://blockchain.info/tobtc?currency=USD&cors=true&value=".str_replace(",", "", $val) ;
 $xml = file_get_contents($request);
 echo "$xml BTC";
 echo $request; ?>
