@@ -40,7 +40,6 @@
                         if (strlen($this->conta_model->user('cpf')) > 5 || strlen($this->conta_model->user('celular')) > 5) {
                             ?>
                             <!-- BEGIN FORM-->
-                            <div class="alert alert-info text-center">Caso o CPF ou Número do celular informado forem inválidos, você não conseguira efetuar o pagamento via boleto bancário.</div>
                             <form action="" method="post" class="form-horizontal">
                                 <div class="form-body">
                                     <div class="form-group">

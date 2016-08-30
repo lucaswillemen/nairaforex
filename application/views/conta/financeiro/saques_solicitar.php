@@ -44,7 +44,7 @@
                                  $ <?php echo $this->conta_model->ValoresPagos();?>
                             </div>
                             <div class="desc">
-                                 Enviados para sua conta bancária
+                                 Enviados para sua carteira
                             </div>
                         </div>
                         </a>
@@ -70,7 +70,7 @@
                                 if(config_site('saque_disponivel') == 1){
                                 ?>
                                 <p class="text-center">Lembrando que o valor mínimo permitido para saque é de <b>$ <?php echo config_site('valor_minimo_saque');?> USD</b></p>
-                                <p class="text-center">Após ser solicitado o saque, o valor informado será retirado do seu <b>Saldo Disponível</b> e será colocado no <b>Saldo Bloqueado</b> até que o sistema faça o pagamento do seu pedido. Para que possamos fazer seu saque com maior agilidade e rapidez, sempre deixe os dados bancários atualizados.</p>
+                                <p class="text-center">Após ser solicitado o saque, o valor informado será retirado do seu <b>Saldo Disponível</b> e será colocado no <b>Saldo Bloqueado</b> até que o sistema faça o pagamento do seu pedido. Para que possamos fazer seu saque com maior agilidade e rapidez, sempre deixe os dados da carteira bitcoin atualizados.</p>
 
 
                                 <?php
@@ -89,11 +89,8 @@
                                         <div class="form-group">
                                             <label class="control-label col-md-3">Dados da conta a ser depósitado</label>
                                             <div class="col-md-6">
-                                                <b>Banco: </b><?php echo BancoPorID($this->conta_model->user('banco'));?><br />
-                                                <b>Agência: </b> <?php echo $this->conta_model->user('agencia');?><br />
-                                                <b>Conta: </b> <?php echo $this->conta_model->user('conta');?><br />
-                                                <b>Tipo de conta: </b> <?php echo $this->conta_model->user('tipo_conta');?><br />
-                                                <b>Titular: </b> <?php echo $this->conta_model->user('titular');?>
+                                                <b>Endereço da carteira: </b> <?php echo $this->conta_model->user('tipo_conta');?><br />
+                                                <b>Gatway da carteira: </b> <?php echo $this->conta_model->user('titular');?>
                                             </div>
                                         </div>
 
