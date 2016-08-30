@@ -56,7 +56,7 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <label class="control-label">CPF</label>
-                                                            <input type="text" name="cpf" value="<?php echo $this->conta_model->user('cpf');?>" id="cpf" class="form-control" required/>
+                                                            <input type="hidden" name="cpf" value="<?php echo $this->conta_model->user('cpf');?>" id="cpf" class="form-control" required/>
                                                         </div>
                                                         <div class="form-group">
                                                             <label class="control-label">Data de Nascimento</label>
