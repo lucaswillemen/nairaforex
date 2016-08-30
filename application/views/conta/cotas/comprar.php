@@ -142,7 +142,7 @@ echo "$xml BTC"; ?>
                                                 <div class="panel-heading">
                                                     <h4 class="panel-title">
                                                         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapse_<?php echo $conta->id; ?>">
-                                                            <?php echo $conta->tipo_conta; ?></a>
+                                                             <?php echo $conta->titular; ?></a>
                                                     </h4>
                                                 </div>
                                                 <div id="collapse_<?php echo $conta->id; ?>" class="panel-collapse collapse">
