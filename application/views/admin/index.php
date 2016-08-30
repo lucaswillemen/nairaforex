@@ -48,7 +48,7 @@
                                 </div>
                                 <div class="col-md-3 col-sm-3 col-xs-6">
                                     <div class="font-grey-mint font-sm">
-                                         Cotas ativas
+                                         Bancas de operação
                                     </div>
                                     <div class="uppercase font-hg theme-font">
                                         <?php echo $this->admin->CotasAtivas();?>
