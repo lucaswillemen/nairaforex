@@ -56,7 +56,7 @@ check_session_admin();
                 <div class="container">
                     <!-- BEGIN LOGO -->
                     <div class="page-logo">
-                        <a  href="<?php echo site_url('ctadmin'); ?>"><img style="width: 48px" src="<?php echo base_url('uploads/' . config_site('imagem_logo_admin')); ?>" alt="logo" class="logo-default"></a>
+                        <a  href="<?php echo site_url('ctadmin'); ?>"><img style="width: 172px" src="<?php echo base_url('uploads/' . config_site('imagem_logo_admin')); ?>" alt="logo" class="logo-default"></a>
                     </div>
                     <!-- END LOGO -->
                     <!-- BEGIN RESPONSIVE MENU TOGGLER -->
