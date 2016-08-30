@@ -68,7 +68,7 @@ echo "$xml BTC"; ?>
                                 }
                                 ?>
 
-                                <h3>Pague por transferência online</h3>
+                                <h3>Clique abaixo para vizualizar a carteira</h3>
 
                                 <p>
                                     Segue abaixo as carteiras disponíveis para depósito. Após o depósito, nos envie o comprovante com a data atual e o seu login. <br />
