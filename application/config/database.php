@@ -49,9 +49,9 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'niftycap_adm';
+$db['default']['username'] = 'root';
 $db['default']['password'] = 'Cpdnc@2016';
-$db['default']['database'] = 'niftycap_db';
+$db['default']['database'] = 'db';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
