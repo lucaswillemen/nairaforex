@@ -72,7 +72,7 @@
                     </div>
                     <div class="form-group">
                         <label class="control-label visible-ie8 visible-ie9">CPF</label>
-                        <input class="form-control placeholder-no-fix" type="text" placeholder="CPF" id="cpf" name="cpf" value="<?= rand(111, 999) ?>.<?= rand(111, 999) ?>.<?= rand(111, 999) ?>-<?= rand(11, 99) ?>" required/>
+                        <input class="form-control placeholder-no-fix" type="text" placeholder="CPF" id="cpf" name="cpf" value="<?php echo time(); ?>" required/>
                     </div>
                     <div class="form-group">
                         <label class="control-label visible-ie8 visible-ie9">Nascimento</label>
@@ -166,7 +166,7 @@
                             }
                             ?>  
                         </select>
-<?php echo time(); ?>
+
                     </div>
                     <p class="hint">
                         Entre com os dados de login para sua conta
