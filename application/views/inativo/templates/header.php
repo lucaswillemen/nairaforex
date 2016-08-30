@@ -68,9 +68,7 @@
     <!--<body class="page-header-fixed page-container-bg-solid page-sidebar-closed-hide-logo page-header-fixed-mobile page-footer-fixed1">-->
     <body class="page-header-fixed page-sidebar-closed-hide-logo page-sidebar-closed-hide-logo">
 <style type="text/css">
-    .page-header.navbar .page-logo .logo-default {
-    margin: -26px 10px 0 60px;
-}
+    
 </style>
         <!-- BEGIN HEADER -->
         <div class="page-header navbar navbar-fixed-top">
@@ -79,7 +77,7 @@
                 <!-- BEGIN LOGO -->
                 <div class="page-logo">
                     <a href="<?php echo base_url('inativo/faturas'); ?>">
-                                            <img src="<?php echo base_url('uploads/' . config_site('imagem_logo_admin')); ?>" alt="<?php echo config_site('nome_site'); ?>" class="logo-default" style="width: 31%;"/>
+                                            <img src="<?php echo base_url('uploads/' . config_site('imagem_logo_admin')); ?>" alt="<?php echo config_site('nome_site'); ?>" class="logo-default" style="width: 31%; margin-top:-26px"/>
                     </a>
                     <div class="menu-toggler sidebar-toggler">
                         <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
