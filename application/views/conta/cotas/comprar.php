@@ -54,7 +54,7 @@
                                                 if ($query->num_rows > 0) {
                                                     foreach ($query->result() as $row) {
                                                         $valor = number_format(config_site('valor_cota') * $row->cotas_qnt, 2);
-                                                        echo "<option value='{$row->cotas_qnt}'>{$row->nome} - {$row->cotas_qnt} cota(s) - {$valor}</option>";
+                                                        echo "<option value='{$row->cotas_qnt}'>{$row->nome} - {$row->cotas_qnt} banca(s) - {$valor}</option>";
                                                     }
                                                 }
                                                 ?>  
