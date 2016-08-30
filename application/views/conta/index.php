@@ -70,7 +70,7 @@
             <div class="display">
                 <div class="number">
                     <h3 class="font-purple-soft"><?php echo $this->conta_model->CotasAtivas(); ?></h3>
-                    <small>COTAS ATIVAS</small>
+                    <small>POSIÇÕES NA MESA DE OPERAÇÃO</small>
                 </div>
                 <div class="icon">
                     <i class="icon-user"></i>
