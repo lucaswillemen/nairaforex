@@ -79,14 +79,6 @@
                                                         </div>
                                                         <div class="row static-info">
                                                             <div class="col-md-5 name">
-                                                                 CPF
-                                                            </div>
-                                                            <div class="col-md-7 value">
-                                                                <?php echo $usuario->cpf;?>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row static-info">
-                                                            <div class="col-md-5 name">
                                                                  Data de nascimento
                                                             </div>
                                                             <div class="col-md-7 value">
@@ -142,33 +134,10 @@
                                                         </div>
                                                     </div>
                                                     <div class="portlet-body">
+                                                        
                                                         <div class="row static-info">
                                                             <div class="col-md-5 name">
-                                                                 Banco
-                                                            </div>
-                                                            <div class="col-md-7 value">
-                                                                <?php echo BancoPorID($usuario->banco);?>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row static-info">
-                                                            <div class="col-md-5 name">
-                                                                 Agência
-                                                            </div>
-                                                            <div class="col-md-7 value">
-                                                                <?php echo $usuario->agencia;?>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row static-info">
-                                                            <div class="col-md-5 name">
-                                                                 Conta
-                                                            </div>
-                                                            <div class="col-md-7 value">
-                                                                <?php echo $usuario->conta;?>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row static-info">
-                                                            <div class="col-md-5 name">
-                                                                 Tipo de conta
+                                                                 Endereço da carteira
                                                             </div>
                                                             <div class="col-md-7 value">
                                                                 <?php echo $usuario->tipo_conta;?>
@@ -176,7 +145,7 @@
                                                         </div>
                                                         <div class="row static-info">
                                                             <div class="col-md-5 name">
-                                                                 Titular
+                                                                 Gatway da carteira
                                                             </div>
                                                             <div class="col-md-7 value">
                                                                 <?php echo $usuario->titular;?>

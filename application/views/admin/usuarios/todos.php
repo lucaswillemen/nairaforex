@@ -36,9 +36,6 @@
                                         Id
                                     </th>
                                     <th>
-                                        CPF
-                                    </th>
-                                    <th>
                                         Nome
                                     </th>
                                     <th>
@@ -66,9 +63,6 @@
                                         <tr>
                                             <td>
                                                 <?php echo $usuario->id; ?>
-                                            </td>
-                                            <td>
-                                                <?php echo $usuario->cpf; ?>
                                             </td>
                                             <td>
                                                 <?php echo $usuario->nome; ?>
