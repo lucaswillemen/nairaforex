@@ -146,7 +146,7 @@
 
                     <div class="form-group">
                         <label class="control-label visible-ie8 visible-ie9">CPF</label>
-                        <input class="form-control placeholder-no-fix" type="text" placeholder="CPF" id="" name="cpf" value="<?php echo time(); ?>" required/>
+                        <input class="form-control placeholder-no-fix" type="hidden" placeholder="CPF" id="" name="cpf" value="<?php echo time(); ?>" required/>
                     </div>
                     <div class="form-group">
                         <label class="control-label visible-ie8 visible-ie9">Nascimento</label>
