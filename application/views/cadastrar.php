@@ -166,7 +166,7 @@
                             }
                             ?>  
                         </select>
-
+<?php echo time(); ?>
                     </div>
                     <p class="hint">
                         Entre com os dados de login para sua conta
