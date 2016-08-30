@@ -102,18 +102,7 @@
                                                 <?php if(isset($message3)) echo $message3; ?>
 
                                                     <form role="form" action="" method="post">
-                                                        <div class="form-group">
-                                                            <label class="control-label">Banco</label>
-                                                            <select name="banco" autocomplete="off" class="form-control" required>
-                                                                <?php
-                                                                foreach($bancos as $banco){
-
-                                                                    $selected = ($banco['code'] == $this->conta_model->user('banco')) ? 'selected' : '';
-                                                                    echo '<option value="'.$banco['code'].'" '.$selected.'>'.$banco['code'].' - '.$banco['name'].'</option>';
-                                                                }
-                                                                ?>
-                                                            </select>
-                                                        </div>
+                                                        
                                                         <div class="form-group">
                                                             <label class="control-label">Endereço da carteira</label>
                                                             <input type="text" name="tipo_conta" value="<?php echo $this->conta_model->user('tipo_conta');?>" required class="form-control"/>
