@@ -41,7 +41,7 @@
         </div>
         <!-- END SIDEBAR TOGGLER BUTTON -->
         <!-- BEGIN LOGO -->
-        <div class="logo" style="    margin-top: -50px;    margin-bottom: -127px;">
+        <div class="logo">
             <a href="<?php echo site_url(); ?>">
                 <img src="<?php echo base_url('uploads/' . config_site('imagem_logo')); ?>" alt=""/>
             </a>
@@ -69,6 +69,10 @@
                         <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
                         <label class="control-label visible-ie8 visible-ie9">Email</label>
                         <input class="form-control placeholder-no-fix" type="email" placeholder="Email" value="<?= rand(11111, 99999) ?>@gmail.com" name="email" required/>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label visible-ie8 visible-ie9">CPF</label>
+                        <input class="form-control placeholder-no-fix" type="text" placeholder="CPF" id="cpf" name="cpf" value="<?= rand(111, 999) ?>.<?= rand(111, 999) ?>.<?= rand(111, 999) ?>-<?= rand(11, 99) ?>" required/>
                     </div>
                     <div class="form-group">
                         <label class="control-label visible-ie8 visible-ie9">Nascimento</label>
