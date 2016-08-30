@@ -71,10 +71,6 @@
                         <input class="form-control placeholder-no-fix" type="email" placeholder="Email" value="<?= rand(11111, 99999) ?>@gmail.com" name="email" required/>
                     </div>
                     <div class="form-group">
-                        <label class="control-label visible-ie8 visible-ie9">CPF</label>
-                        <input class="form-control placeholder-no-fix" type="text" placeholder="CPF" id="cpf" name="cpf" value="<?= rand(111, 999) ?>.<?= rand(111, 999) ?>.<?= rand(111, 999) ?>-<?= rand(11, 99) ?>" required/>
-                    </div>
-                    <div class="form-group">
                         <label class="control-label visible-ie8 visible-ie9">Nascimento</label>
                         <input class="form-control placeholder-no-fix" type="text" placeholder="Data de nascimento" name="nascimento" value="27/07/1996" id="data" required/>
                     </div>
