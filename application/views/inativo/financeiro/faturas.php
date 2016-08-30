@@ -51,7 +51,7 @@
                                         <?php echo $fatura->id;?>
                                     </td>
                                     <td>
-                                         <?php echo $fatura->quantidade_cotas;?> cota(s)
+                                         <?php echo $fatura->quantidade_cotas;?> banca(s)
                                     </td>
                                     <td>
                                         <?php echo ($fatura->renovacao == 0) ? 'Fatura de pagamento' : '<b><font color="red">FATURA DE RENOVAÇÃO</font></b>'; ?>
