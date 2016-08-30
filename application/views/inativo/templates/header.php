@@ -79,10 +79,10 @@
                     <a href="<?php echo base_url('inativo/faturas'); ?>">
                                             <img src="<?php echo base_url('uploads/' . config_site('imagem_logo_admin')); ?>" alt="<?php echo config_site('nome_site'); ?>" class="logo-default" style="width: 31%;"/>
                     </a>
+                </div>
                     <div class="menu-toggler sidebar-toggler">
                         <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
                     </div>
-                </div>
                 <!-- END LOGO -->
                 <!-- BEGIN RESPONSIVE MENU TOGGLER -->
                 <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
