@@ -41,7 +41,7 @@
         </div>
         <!-- END SIDEBAR TOGGLER BUTTON -->
         <!-- BEGIN LOGO -->
-        <div class="logo">
+        <div class="logo" style="    margin-top: -50px;    margin-bottom: -127px;">
             <a href="<?php echo site_url(); ?>">
                 <img src="<?php echo base_url('uploads/' . config_site('imagem_logo')); ?>" alt=""/>
             </a>
