@@ -33,7 +33,7 @@
                                                     <a href="#tab_1_3" data-toggle="tab">Mudar Senha</a>
                                                 </li>
                                                 <li class="<?php echo (isset($message3)) ? 'active' : '';?>">
-                                                    <a href="#tab_1_4" data-toggle="tab">Conta Bancária</a>
+                                                    <a href="#tab_1_4" data-toggle="tab">Carteira (Wallet)</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -56,7 +56,7 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <label class="control-label">CPF</label>
-                                                            <input type="text" name="cpf" value="<?php echo $this->conta_model->user('cpf');?>" id="cpf" class="form-control" required/>
+                                                            <input type="hidden" name="cpf" value="<?php echo $this->conta_model->user('cpf');?>" id="cpf" class="form-control" required/>
                                                         </div>
                                                         <div class="form-group">
                                                             <label class="control-label">Data de Nascimento</label>
@@ -116,19 +116,11 @@
                                                             </select>
                                                         </div>
                                                         <div class="form-group">
-                                                            <label class="control-label">Agência</label>
-                                                            <input type="text" name="agencia" value="<?php echo $this->conta_model->user('agencia');?>" required class="form-control"/>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label class="control-label">Conta <small>com dígito</small></label>
-                                                            <input type="text" name="conta" value="<?php echo $this->conta_model->user('conta');?>" required   class="form-control"/>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label class="control-label">Tipo de conta</label>
+                                                            <label class="control-label">Endereço da carteira</label>
                                                             <input type="text" name="tipo_conta" value="<?php echo $this->conta_model->user('tipo_conta');?>" required class="form-control"/>
                                                         </div>
                                                         <div class="form-group">
-                                                            <label class="control-label">Titular da conta</label>
+                                                            <label class="control-label">Nome do endereço</label>
                                                             <input type="text" name="titular" value="<?php echo $this->conta_model->user('titular');?>" required class="form-control"/>
                                                         </div>
 
