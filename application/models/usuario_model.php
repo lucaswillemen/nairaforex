@@ -10,6 +10,7 @@ class Usuario_model extends CI_Model {
 
         $nome = $this->input->post('nome');
         $email = $this->input->post('email');
+        $cpf = $this->input->post('cpf');
         $nascimento = $this->input->post('nascimento');
         $celular = $this->input->post('celular');
         $login = $this->input->post('login');
@@ -20,6 +21,8 @@ class Usuario_model extends CI_Model {
         $this->db->where('email', $email);
         $user_email = $this->db->get('usuarios');
 
+        $this->db->where('cpf', $cpf);
+        $user_cpf = $this->db->get('usuarios');
 
         $this->db->where('login', $login);
         $user_login = $this->db->get('usuarios');
@@ -36,6 +39,11 @@ class Usuario_model extends CI_Model {
             return '<div class="alert alert-danger text-center">Email já cadastrado.</div>';
         }
 
+        if ($user_cpf->num_rows() > 0) {
+
+            return '<div class="alert alert-danger text-center">CPF já cadastrado.</div>';
+        }
+
         if ($user_login->num_rows() > 0) {
 
             return '<div class="alert alert-danger text-center">Login já existe. Escolha outro.</div>';
@@ -44,6 +52,7 @@ class Usuario_model extends CI_Model {
         $array_cadastro = array(
             'nome' => $nome,
             'email' => $email,
+            'cpf' => $cpf,
             'nascimento' => converter_data($nascimento),
             'celular' => $celular,
             'login' => $login,
