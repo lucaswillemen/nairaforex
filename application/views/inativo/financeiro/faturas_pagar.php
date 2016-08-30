@@ -39,7 +39,7 @@ $val = number_format($quantidade * (config_site('valor_cota')), 2);
 $request = "https://blockchain.info/tobtc?currency=USD&cors=true&value=".str_replace(",", "", $val) ;
 $xml = file_get_contents($request);
 echo "$xml BTC";
-echo $request; ?>
+?>
                                 </p>
 
                                 <?php
@@ -48,7 +48,7 @@ echo $request; ?>
 
                                 ?>
 
-                                <h3>Pague usando Boleto Bancário</h3>
+                                <h3>Pague usando BlockChain</h3>
 
                                 <a href="<?php echo $link_boleto;?>" target="_blank"><img src="<?php echo base_url();?>assets/admin/layout/img/boleto.png" height="70" /></a>
                                 <?php
