@@ -42,7 +42,7 @@ class Cron_model extends CI_Model{
                         $saldo_atual = $row_user->saldo_disponivel;
                         $valor_pago = randomWithDecimal(config_site('valor_minimo_pago'), config_site('valor_maximo_pago'), 2)*$cota->quantidade;
 
-                        $this->conta_model->InserirExtrato($cota->id_user, 'Pagamento de '.$cota->quantidade.' cota(s)', $valor_pago, 'green');
+                        $this->conta_model->InserirExtrato($cota->id_user, 'Pagamento de '.$cota->quantidade.' cota(s)', ($valor_pago/100), 'green');
 
                         $this->db->where('id', $cota->id_user);
                         $this->db->update('usuarios', array('saldo_disponivel'=>($saldo_atual+($valor_pago/100))));
