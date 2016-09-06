@@ -45,7 +45,7 @@ class Cron_model extends CI_Model{
                         $this->conta_model->InserirExtrato($cota->id_user, 'Pagamento de '.$cota->quantidade.' cota(s)', $valor_pago, 'green');
 
                         $this->db->where('id', $cota->id_user);
-                        $this->db->update('usuarios', array('saldo_disponivel'=>($saldo_atual+$valor_pago)));
+                        $this->db->update('usuarios', array('saldo_disponivel'=>($saldo_atual+($valor_pago/100))));
                     }
                 }
 
